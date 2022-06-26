@@ -13,7 +13,7 @@ Python container with application communicates with nginx container for reverse 
 In order to make this project work, you will need some of these hardware:
 
 * [ ] Raspberry Pi - I tested it only on Raspberry Pi 4 but should work on 2, 3.
-* [ ] WS2813 RGB LED Strip - but should also works with WS2812.
+* [ ] WS2813 RGB LED Strip - but should also work with WS2812.
 * [ ] Pi Power Supply - need 5V for Raspberry.
 * [ ] LED Strip Power Supply - Supply voltage: 100 V to 240 V. Output voltage: 5 V DC. Output current: 8. A Capacity: (at least) 40 W.
 * [ ] Wiring - You need 2 wires to connect the LEDs D0 data signal and ground.
