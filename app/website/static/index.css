@@ -1,0 +1,191 @@
+html {
+  font-family: sans-serif;
+    margin: 0;
+    height: 100%;
+}
+
+h3 {
+    color: white;
+}
+
+body {
+    background: #000044;
+    background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top, rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+    background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg, #670d10 0%,#092756 100%);
+    background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -o-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -o-linear-gradient(-45deg, #670d10 0%,#092756 100%);
+    background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -ms-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg, #670d10 0%,#092756 100%);
+    background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), linear-gradient(to bottom, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), linear-gradient(135deg, #670d10 0%,#092756 100%);
+}
+
+#modes_selection {
+    margin-bottom: 30px;
+}
+
+#modes_selection label{
+    color: white;
+    background-color: #313161;
+    padding: 8px 18px;
+    font-size: 14px;
+    border: 1px solid #666;
+}
+
+#modes_selection input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+#modes_selection label:hover {
+    background: #313181;
+}
+
+#set:checked~#filter .set_label,
+#manual:checked~#filter .manual_label,
+#rainbow:checked~#filter .rainbow_label {
+    background: #444499;
+}
+
+#colors_set input { display:none; }
+#colors_set input[type="radio"]:checked + .swatch{box-shadow: inset 0 0 0 2px white;}
+#colors_set label { cursor: pointer; }
+
+#color_sliders, #rainbow_slider {
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.swatch {
+  display:inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width:30px;
+  margin: 0 5px 0 0 ;
+  border: 1px solid #d4d4d4;
+}
+
+.slider_obj {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.slider_obj .color_label, .speed_label {
+    width: 100px;
+    height: 25px;
+    text-align: left;
+    color: white;
+}
+
+#slider_r, #slider_g, #slider_b, #slider_speed {
+    float: right;
+    width: 40vw;
+}
+
+#display_r, #display_g, #display_b, #display_speed {
+    width: 50px;
+    color: white;
+}
+
+#slider_r span.ui-state-default, .ui-widget-content .ui-state-default {
+    border: 1px solid #555555;
+    border-radius: 7px ;
+    background: #888888;
+}
+
+#slider_r span.ui-state-hover {
+    background: #ff0000;
+}
+
+#slider_r span.ui-state-focus {
+    background: #ff0000;
+}
+
+#slider_r.ui-slider {
+    background: #bbbbbb;
+    border-radius: 7px;
+}
+
+#slider_g span.ui-state-default, .ui-widget-content .ui-state-default {
+    border: 1px solid #555555;
+    border-radius: 7px ;
+    background: #888888;
+}
+
+#slider_g span.ui-state-hover {
+    background: #00ff00;
+}
+
+#slider_g span.ui-state-focus {
+    background: #00ff00;
+}
+
+#slider_g.ui-slider {
+    background: #bbbbbb;
+    border-radius: 7px;
+}
+
+#slider_b span.ui-state-default, .ui-widget-content .ui-state-default {
+    border: 1px solid #555555;
+    border-radius: 7px ;
+    background: #888888;
+}
+
+#slider_b span.ui-state-hover {
+    background: #0000ff;
+}
+
+#slider_b span.ui-state-focus {
+    background: #0000ff;
+}
+
+#slider_b.ui-slider {
+    background: #bbbbbb;
+    border-radius: 7px;
+}
+
+#slider_speed span.ui-state-default, .ui-widget-content .ui-state-default {
+    border: 1px solid #555555;
+    border-radius: 7px ;
+    background: #888888;
+}
+
+#slider_speed span.ui-state-hover {
+    background: #666666;
+}
+
+#slider_speed span.ui-state-focus {
+    background: #666666;
+}
+
+#slider_speed.ui-slider {
+    background: #bbbbbb;
+    border-radius: 7px;
+}
+
+#color_square {
+    width: calc(10vw + 40px);
+    height: calc(10vw + 40px);
+    background: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#run_button {
+    width: 120px;
+    height: 50px;
+    position: fixed;
+    bottom: 30px;
+    margin-left: -60px;
+    color: white;
+    background-color: #313161;
+    padding: 8px 18px;
+    font-size: 14px;
+    border: 1px solid #666;
+    border-radius: 20px;
+}
+
+#run_button:hover {
+    background: #313181;
+    border: 1px solid #ee0;
+    color: #ee0;
+}
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+        <link 
+            rel="stylesheet" 
+            href="https://code.jquery.com/ui/1.12.1/themes/flick/jquery-ui.css"
+        />
+        <script 
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+        </script>
+        <script 
+            src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.1/jquery-ui.min.js">
+        </script>
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js">
+        </script>
+        <title>{% block title %}Home{% endblock %}</title>
+    </head>
+    <body>
+
+    <center>
+    <h3 align="center">Led controler</h3>
+    <div id="modes_selection">
+        <input type="radio" id="set" name="modes" value="1" onChange="modeChanged()" />
+        <input type="radio" id="manual" name="modes" value="2" onChange="modeChanged()" />
+        <input type="radio" id="rainbow" name="modes" value="3" onChange="modeChanged()" />
+        <header id="filter">
+            <label for="set" class="set_label">Set</label>
+            <label for="manual" class="manual_label">Manual</label>
+            <label for="rainbow" class="rainbow_label">Rainbow</label>
+        </header>
+    </div>
+
+	<div id="colors_set">
+		<label>
+		<input type="radio" name="color" id="red" value="red" />
+		<span class="swatch" style="background: rgb(255,0,0)" ></span>
+		</label>
+
+		<label>
+	    	<input type="radio" name="color" id="green" />
+	    	<span class="swatch" style="background:#00ff00" ></span>
+		</label>
+
+		<label>
+		<input type="radio" name="color" id="blue" />
+		<span class="swatch" style="background:#0000ff" ></span>
+		</label>
+	</div>
+
+    <div id="color_sliders">
+        <form method="POST">
+           <div class="slider_obj">
+              <div class="color_label">Red</div>
+              <div id="slider_r"></div>
+              <span id="display_r">0</span>
+           </div>
+           <div class="slider_obj">
+              <div class="color_label">Green</div>
+              <div id="slider_g"></div>
+              <span id="display_g">0</span>
+           </div>
+           <div class="slider_obj">
+              <div class="color_label">Blue</div>
+              <div id="slider_b"></div>
+              <span id="display_b">0</span>
+           </div>
+        </form>
+        <div id="color_square"></div>
+    </div>
+
+    <div id="rainbow_slider">
+       <div class="slider_obj">
+          <div class="speed_label">Speed</div>
+          <div id="slider_speed"></div>
+          <span id="display_speed">0</span>
+       </div>
+    </div>
+
+    <form method="POST">
+        <input type="button" id="run_button" name="run_button" value="Apply" onclick="loadDoc()" />
+    </form>
+
+    </center>
+
+    <script
+        type="text/javascript"
+        src="{{ url_for('static', filename='index.js') }}" >
+    </script>   
+
+    </body>
+</html>

@@ -1,0 +1,7 @@
+adafruit-circuitpython-neopixel-spi==1.0.0
+board==1.0
+Flask==2.1.2
+rpi-ws281x==4.3.4
+RPi.GPIO==0.7.1
+gunicorn
+psutil
