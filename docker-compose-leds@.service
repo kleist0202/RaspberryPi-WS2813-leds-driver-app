@@ -4,8 +4,10 @@ After=docker.service network-online.target
 Requires=docker.service network-online.target
 
 [Service]
-WorkingDirectory=/home/hans/compose/leds_driver
+User:%i
+WorkingDirectory=/home/%i/leds_driver
 Type=oneshot
+Restart=on-failure
 RemainAfterExit=yes
 
 ExecStartPre=-/usr/local/bin/docker-compose pull --quiet
