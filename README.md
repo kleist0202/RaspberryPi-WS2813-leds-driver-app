@@ -38,10 +38,13 @@ For this project, you need to connect two pins: ground and D0 data signal:
 ### Software
 
 #### 1. Install docker and docker-compose and activate docker service.
-#### 2. Clone repostitory into your system (you will need git or just download zip).
+#### 2. Clone repostitory into your system (you will need git or just download zip) and let code be in directory called `leds_driver`.
+    git clone https://github.com/kleist0202/RaspberryPi-WS2813-leds-driver-app.git leds_driver
 #### 3. Enter project diretory.
 #### 4. Enter command:
     docker-compose up -d
 #### 5. Wait till images and containers are built.
 #### 6. Enter IP address of your Raspberry Pi in browser.
 #### 7. Enjoy changing your led strip colors!
+##### 8. You can also use systemd service provided in this repo to build this project, but additionally it will always start after rebooting your machine. Just type:
+    sudo make install USER_ENV=$USER
